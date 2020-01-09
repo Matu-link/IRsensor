@@ -15,18 +15,15 @@ void setAllSensorPinsInput(void) {
  */
 bool getSensorPin(uint8_t pin) {
     switch(pin) {
-        case 0:   return PINB&(1<<2);
-        case 1:   return PINB&(1<<1);
-        case 2:   return PIND&(1<<5);
-        case 3:   return PIND&(1<<6);
-        case 4:   return PIND&(1<<7);
-        case 5:   return PINB&(1<<0);
-        case 6:   return PIND&(1<<4);
-        case 7:   return PIND&(1<<2);
-        case 8:   return PIND&(1<<3);
-        case 9:   return PINC&(1<<3);
-        case 10:  return PINB&(1<<4);
-        case 11:  return PINB&(1<<3);
+	case 0:   return PINB & (1 << 5);
+	case 1:   return PINB & (1 << 7);
+	case 2:   return PINJ & (1 << 0);
+	case 3:   return PINH & (1 << 0);
+	case 4:   return PINC & (1 << 4);
+	case 5:   return PINC & (1 << 2);
+	case 6:   return PINC & (1 << 0);
+	case 7:   return PING & (1 << 2);
+
     }
 }
 
