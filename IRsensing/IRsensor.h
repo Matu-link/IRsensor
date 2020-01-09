@@ -5,10 +5,11 @@
 #define IR_NUM 8
 
 // ハードウェア依存の変数
-const uint8_t   SensorPins[IR_NUM]  = {11,13,15,17,33,35,37,39};
-const float     unitVectorX[IR_NUM] = { 0.000, 0.500,  1.000,  0.500, 0.000, -0.500, -1.000,  -0.500 };
-const float     unitVectorY[IR_NUM] = { 1.000,  0.500, 0.000, -0.500,  -1.000,  -0.500, 0.000, 0.500 };
-const float     deltaPulseWidth     = 2.0;
+const uint8_t   SensorPins[IR_NUM]  = { 11,13,15,17,33,35,37,39 };
+const float     unitVectorX[IR_NUM] = { 0.000,-0.707,-1.000,-0.707,0.000,0.707,1.000,0.707 };
+const float     unitVectorY[IR_NUM] = { -1.000,-0.707,0.000,0.707,1.000,0.707,0.000,-0.707 };
+const float     deltaPulseWidth = 2.0;
+
 
 typedef struct {
     int activeSensors;      // 反応したセンサの個数
